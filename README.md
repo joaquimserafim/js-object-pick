@@ -1,5 +1,6 @@
 # js-object-pick
 
+Return a copy of the object only containing the specified properties
 
 <a href="https://nodei.co/npm/js-object-pick/"><img src="https://nodei.co/npm/js-object-pick.png?downloads=true"></a>
 

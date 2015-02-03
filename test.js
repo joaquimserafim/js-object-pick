@@ -3,7 +3,7 @@
 var test = require('tape');
 var pick = require('./');
 
-test('Return a copy of the object only containing the specified properties',
+test('return a copy of the object only containing the specified properties',
 function(assert) {
   var obj = require('./package.json');
   var newObj = pick(obj, ['version', 'name']);
@@ -13,7 +13,7 @@ function(assert) {
   assert.end();
 });
 
-test('same test put pass a string in the list keys', function(assert) {
+test('same test put use a string to filter with one key', function(assert) {
   var obj = require('./package.json');
   var newObj = pick(obj, 'description');
   assert.deepEqual(typeof newObj, 'object');

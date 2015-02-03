@@ -16,5 +16,6 @@ function pick(obj, list, context) {
     .forEach(function(key) {
       result[key] = obj[key];
     }, context);
+
   return result;
 }
