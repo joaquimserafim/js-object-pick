@@ -8,7 +8,7 @@ Return a copy of the object only containing the specified properties
 
 ## API
 
-#### pick(object:jsObject, list_of_keys:(array || string), [*this* context])
+#### pick(object:jsObject, list_of_keys:(array || string)[, *this* context])
 
 ## Usage
 
