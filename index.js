@@ -1,20 +1,39 @@
-'use strict';
+/*
+eslint
+no-multi-spaces: ["error", {exceptions: {"VariableDeclarator": true}}]
+padded-blocks: ["error", {"classes": "always"}]
+max-len: ["error", 80]
+*/
+'use strict'
 
-module.exports = pick;
+const isObject = require('is.object')
 
-function pick(obj, list, context) {
-  var result = {};
+var pick = module.exports = pickFn
 
-  if (typeof list === 'string') {
-    list = [list];
+pick.one = function one (obj, key) {
+  if (!isObject(obj)) {
+    return {}
   }
 
-  Object.keys(obj)
-    .forEach(function(key) {
-      if (list.indexOf(key) > -1) {
-        result[key] = obj[key];
-      }
-    }, context);
+  const res = {}
 
-  return result;
+  obj[key] && (res[key] = obj[key])
+
+  return res
+}
+
+function pickFn (obj, keys) {
+  if (!isObject(obj)) {
+    return {}
+  }
+
+  const res = {}
+  let i = -1
+
+  while (++i < keys.length) {
+    let key = keys[i]
+    obj[key] && (res[key] = obj[key])
+  }
+
+  return res
 }
