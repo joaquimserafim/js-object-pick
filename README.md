@@ -1,6 +1,6 @@
 # js-object-pick
 
-Return a copy of the object only containing the specified properties
+Returns a new object only containing the specified properties
 
 <a href="https://nodei.co/npm/js-object-pick/"><img src="https://nodei.co/npm/js-object-pick.png?downloads=true"></a>
 
@@ -9,11 +9,8 @@ Return a copy of the object only containing the specified properties
 ## API
 `const pick = require('js-object-pick')`
 
-`pick(jsObject, array:string)`
+`pick(jsObject, a string or an array of strings)`
 
-`pick.one(jsObject, string)`
-
-Note: to pick only one prop should use `pick.one` for better performance
 
 ## Usage
 
@@ -25,7 +22,7 @@ const package = require('./package.json')
 const filter = pick(package, ['version', 'name'])
 // filter should have only "version" & "name" props
 
-const description = pick.one({desc: 'hey', value: 'Hello World'}, 'desc')
+const description = pick({desc: 'hey', value: 'Hello World'}, 'desc')
 // description should be {desc: 'hey'}
 ```
 

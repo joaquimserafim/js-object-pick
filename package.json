@@ -1,6 +1,6 @@
 {
   "name": "js-object-pick",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Returns a new object containing only the specified properties",
   "main": "index.js",
   "scripts": {

@@ -27,12 +27,11 @@ test('should return one prop when is not passed an array with the filter keys',
 )
 
 test('using "pick.one" to get one given property', function (assert) {
-  assert.deepEqual(pick.one(obj, 'b'), {b: 2})
+  assert.deepEqual(pick(obj, 'b'), {b: 2})
   assert.end()
 })
 
 test('run object checks', function (assert) {
-  assert.deepEqual(pick.one(null, 'b'), {})
   assert.deepEqual(pick(null, ['b']), {})
   assert.end()
 })
